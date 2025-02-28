@@ -1,14 +1,14 @@
-import { DashScope } from '../dist';
+import { HunYuan } from '../dist';
 
-let client: DashScope;
+let client: HunYuan;
 
 beforeAll(() => {
-  client = new DashScope(process.env.DASHSCOPE_API_KEY!);
+  client = new HunYuan(process.env.HUNYUAN_API_KEY!);
 });
 
-test('DashScope stream', async () => {
+test('HunYuan stream', async () => {
   const stream = await client.stream({
-    model: 'qwen-plus',
+    model: 'hunyuan-turbo',
     stream: true,
     messages: [{ role: 'user', content: 'Hi!' }],
   });
