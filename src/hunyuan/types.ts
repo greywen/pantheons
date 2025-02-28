@@ -1,7 +1,7 @@
 import { ChatCompletionCreateParamsStreaming } from 'openai/resources';
 
 export type ChatModels =
-  | 'hunyuan-TurboS'
+  'hunyuan-TurboS'
   | 'hunyuan-turbo'
   | 'hunyuan-large'
   | 'hunyuan-large-longcontext'
