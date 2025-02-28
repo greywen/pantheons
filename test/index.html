@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Test</title>
+  </head>
+  <body>
+    <script src="../dist/index.min.js"></script>
+    <script>
+      (async () => {
+        const { DashScope } = LLMs;
+
+        const dashScopeClient = new DashScope('Your key', {
+          dangerouslyAllowBrowser: true,
+        });
+
+        const stream = await dashScopeClient.stream({
+          model: 'qwen-plus',
+          stream: true,
+          messages: [{ role: 'user', content: 'Hi!' }],
+        });
+
+        for await (const chunk of stream) {
+          console.log(chunk.choices[0].delta?.content);
+        }
+      })();
+    </script>
+  </body>
+</html>

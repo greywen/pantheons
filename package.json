@@ -1,0 +1,56 @@
+{
+  "name": "pantheons",
+  "version": "0.0.1-beta.2",
+  "private": false,
+  "description": "Pantheons.js is a unified conversational library built on top of the OpenAI Node.js SDK. It provides a seamless interface to interact with multiple large language models (LLMs) like OpenAI, DashScope, Gemini, xAI, and more.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "build": "npm run tsc && rollup -c",
+    "watch": "tsc --watch",
+    "dev": "rollup --config rollup.config.mjs --watch",
+    "test": "jest"
+  },
+  "keywords": [
+    "openai",
+    "dashscope",
+    "llms"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/greywen/pantheons"
+  },
+  "author": "gy gray.wen@outlook.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/jest": "^29.5.14",
+    "dotenv": "^16.4.7",
+    "rollup": "^4.34.8",
+    "rollup-plugin-delete": "^3.0.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "ts-jest": "^29.2.6",
+    "tslib": "^2.8.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "openai": "^4.85.4"
+  },
+  "volta": {
+    "node": "22.14.0"
+  }
+}
