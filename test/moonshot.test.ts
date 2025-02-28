@@ -1,14 +1,14 @@
-import { DashScope } from '../dist';
+import { Moonshot } from '../dist';
 
-let client: DashScope;
+let client: Moonshot;
 
 beforeAll(() => {
-  client = new DashScope(process.env.DASHSCOPE_API_KEY!);
+  client = new Moonshot(process.env.MOONSHOT_API_KEY!);
 });
 
-test('DashScope text stream', async () => {
+test('Moonshot text stream', async () => {
   const stream = await client.stream({
-    model: 'qwen-plus',
+    model: 'kimi-latest',
     stream: true,
     messages: [{ role: 'user', content: 'Hi!' }],
   });
