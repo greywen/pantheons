@@ -13,7 +13,7 @@ export class OpenAI extends ClientBase<
   constructor(
     apiKey: string,
     baseURL = 'https://api.openai.com/v1',
-    options?: ClientBaseOptions
+    options: ClientBaseOptions = {}
   ) {
     super(apiKey, baseURL, options);
   }
@@ -22,7 +22,7 @@ export class OpenAI extends ClientBase<
     return new OpenAIClient({
       apiKey: this.apiKey,
       baseURL: this.baseURL,
-      ...(this.options || {}),
+      ...this.options,
     });
   }
 

@@ -6,7 +6,7 @@ export abstract class ClientBase<StreamBody, StreamResult> {
     protected apiKey: string,
     protected baseURL: string | null = null,
     protected options?: ClientBaseOptions
-  ) {}
+  ) { }
   abstract stream(
     body: StreamBody,
     options?: RequestOptions
