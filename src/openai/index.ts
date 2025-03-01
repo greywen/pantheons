@@ -12,16 +12,16 @@ export class OpenAI extends ClientBase<
 > {
   constructor(
     apiKey: string,
-    baseUrl = 'https://api.openai.com/v1',
+    baseURL = 'https://api.openai.com/v1',
     options?: ClientBaseOptions
   ) {
-    super(apiKey, baseUrl, options);
+    super(apiKey, baseURL, options);
   }
 
   public async create() {
     return new OpenAIClient({
       apiKey: this.apiKey,
-      baseURL: this.baseUrl,
+      baseURL: this.baseURL,
       ...(this.options || {}),
     });
   }

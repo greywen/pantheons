@@ -6,5 +6,6 @@ import { Siliconflow } from "./siliconflow"
 import { Deepseek } from './deepseek';
 import { QianFan } from './qianfan';
 import { Gemini } from './gemini';
+import { Ollama } from './ollama';
 
-export { DashScope, OpenAI, HunYuan, Moonshot, Siliconflow, Deepseek, QianFan, Gemini };
+export { DashScope, OpenAI, HunYuan, Moonshot, Siliconflow, Deepseek, QianFan, Gemini, Ollama };

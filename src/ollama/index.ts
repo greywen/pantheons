@@ -2,17 +2,17 @@ import { ChatCompletionChunk } from 'openai/resources';
 import { OpenAI } from '../openai';
 import { RequestOptions, APIPromise } from 'openai/core';
 import { Stream } from 'openai/streaming';
-import { GeminiChatCompletionCreateParamsStreaming } from './types';
+import { OllamaChatCompletionCreateParamsStreaming } from './types';
 import { ClientBaseOptions } from '../core/types';
 
-export class Gemini extends OpenAI {
+export class Ollama extends OpenAI {
     constructor(apiKey: string, options?: ClientBaseOptions) {
-        let baseURL = 'https://generativelanguage.googleapis.com/v1beta/openai/';
+        let baseURL = options?.baseURL || 'http://localhost:11434/v1';
         super(apiKey, baseURL, options);
     }
 
     override async stream(
-        body: GeminiChatCompletionCreateParamsStreaming,
+        body: OllamaChatCompletionCreateParamsStreaming,
         options?: RequestOptions
     ): Promise<APIPromise<Stream<ChatCompletionChunk>>> {
         const client = await this.create();

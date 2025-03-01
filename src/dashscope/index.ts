@@ -7,8 +7,8 @@ import { ClientBaseOptions } from '../core/types';
 
 export class DashScope extends OpenAI {
   constructor(apiKey: string, options?: ClientBaseOptions) {
-    let baseUrl = 'https://dashscope.aliyuncs.com/compatible-mode/v1';
-    super(apiKey, baseUrl, options);
+    let baseURL = 'https://dashscope.aliyuncs.com/compatible-mode/v1';
+    super(apiKey, baseURL, options);
   }
 
   override async stream(

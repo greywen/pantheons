@@ -7,8 +7,8 @@ import { ClientBaseOptions } from '../core/types';
 
 export class QianFan extends OpenAI {
     constructor(apiKey: string, options?: ClientBaseOptions) {
-        let baseUrl = 'https://qianfan.baidubce.com/v2';
-        super(apiKey, baseUrl, options);
+        let baseURL = 'https://qianfan.baidubce.com/v2';
+        super(apiKey, baseURL, options);
     }
 
     override async stream(

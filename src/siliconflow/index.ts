@@ -7,8 +7,8 @@ import { ClientBaseOptions } from '../core/types';
 
 export class Siliconflow extends OpenAI {
   constructor(apiKey: string, options?: ClientBaseOptions) {
-    let baseUrl = 'https://api.siliconflow.cn/v1';
-    super(apiKey, baseUrl, options);
+    let baseURL = 'https://api.siliconflow.cn/v1';
+    super(apiKey, baseURL, options);
   }
 
   override async stream(

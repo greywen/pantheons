@@ -7,8 +7,8 @@ import { ClientBaseOptions } from '../core/types';
 
 export class HunYuan extends OpenAI {
   constructor(apiKey: string, options?: ClientBaseOptions) {
-    let baseUrl = 'https://api.hunyuan.cloud.tencent.com/v1';
-    super(apiKey, baseUrl, options);
+    let baseURL = 'https://api.hunyuan.cloud.tencent.com/v1';
+    super(apiKey, baseURL, options);
   }
 
   override async stream(

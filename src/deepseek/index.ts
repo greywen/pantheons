@@ -7,8 +7,8 @@ import { ClientBaseOptions } from '../core/types';
 
 export class Deepseek extends OpenAI {
   constructor(apiKey: string, options?: ClientBaseOptions) {
-    let baseUrl = 'https://api.deepseek.com';
-    super(apiKey, baseUrl, options);
+    let baseURL = 'https://api.deepseek.com';
+    super(apiKey, baseURL, options);
   }
 
   override async stream(
