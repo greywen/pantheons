@@ -8,6 +8,7 @@ import { QianFan } from './qianfan';
 import { Gemini } from './gemini';
 import { Ollama } from './ollama';
 import { ZhiPu } from './zhipu';
+import { XAI } from './xai';
 
 export {
     OpenAI,
@@ -19,5 +20,6 @@ export {
     QianFan,
     Gemini,
     Ollama,
-    ZhiPu
+    ZhiPu,
+    XAI
 };
