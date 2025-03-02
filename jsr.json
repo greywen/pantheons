@@ -1,12 +1,7 @@
 {
     "name": "@greywen/pantheons",
-    "version": "0.0.4",
-    "exports": {
-        ".": "./src/index.ts"
-    },
-    "types": {
-        ".": "./src/index.d.ts"
-    },
+    "version": "0.0.5",
+    "exports": "./src/index.ts",
     "publish": {
         "exclude": [
             ".env"

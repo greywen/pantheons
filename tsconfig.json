@@ -12,6 +12,9 @@
         "skipLibCheck": true,
         "moduleResolution": "node",
     },
+    "types": [
+        "./src/index.d.ts"
+    ],
     "exclude": [
         "dist",
         "test",
