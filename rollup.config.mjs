@@ -59,10 +59,10 @@ const config = defineConfig([
         },
         plugins: [
             dts(),
-            del({
-                targets: 'dist/types',
-                hook: 'buildEnd'
-            })
+            // del({
+            //     targets: 'dist/types',
+            //     hook: 'buildEnd'
+            // })
         ]
     }
 ])
