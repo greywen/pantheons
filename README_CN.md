@@ -2,7 +2,7 @@
 **[English](README_EN.md)** | **简体中文**
 
 # Pantheons(万神殿)
-`Pantheons.js` 是一个基于 OpenAI Node.js SDK 构建的统一对话库。它提供了一个无缝的接口，可以与多个大型语言模型（LLMs）进行交互，如 OpenAI、Deepseek、DashScope、Gemini 等。该库的灵感来源于神话中的众神殿，每个神明代表着独特的力量和属性，Pantheons将各种模型统一在一个直观的接口下。
+`Pantheons.js` 是一个基于 OpenAI Node.js SDK 构建的统一对话库。它提供了一个无缝的接口，可以与多个大型语言模型（LLMs）进行交互，如 OpenAI、Deepseek、DashScope、Gemini 等。该库的灵感来源于神话中的众神殿，每个神明代表着独特的力量和属性，Pantheons将各种模型统一在一个库下。
 
 ## 支持的大模型
 - [OpenAI](https://platform.openai.com/docs/api-reference/introduction)
@@ -19,9 +19,9 @@
 
 ## 安装方法
 
-#### 使用 npm:
 ```
 npm install pantheons
+bunx jsr add @greywen/pantheons
 ```
 
 ## 使用方法
@@ -46,4 +46,26 @@ import { Deepseek } from 'pantheons';
 
     console.log(result);
 })()
+```
+
+#### Bun
+
+```typescript
+import { Deepseek } from "@greywen/pantheons";
+
+
+const client = new Deepseek('Your key');
+const stream = await client.stream({
+    model: 'deepseek-chat',
+    stream: true,
+    messages: [{ role: 'user', content: 'Hi!' }],
+});
+
+let result = '';
+for await (const chunk of stream) {
+    result += chunk.choices[0].delta?.content;
+}
+
+console.log(result);
+
 ```

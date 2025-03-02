@@ -1,7 +1,7 @@
 **[简体中文](README_CN.md)** | **English**
 
 # Pantheons
-`Pantheons.js` is a unified conversational library built on top of the OpenAI Node.js SDK. It provides a seamless interface to interact with multiple large language models (LLMs) like OpenAI, Deepseek, DashScope, Gemini and more. Inspired by the mythological pantheon of gods—each representing unique powers and attributes—this library unifies various models under a single, intuitive interface.
+`Pantheons.js` is a unified conversational library built on top of the OpenAI Node.js SDK. It provides a seamless interface to interact with multiple large language models (LLMs) like OpenAI, Deepseek, DashScope, Gemini and more. Inspired by the mythological pantheon of gods—each representing unique powers and attributes—this library unifies various models under a single.
 
 ## Supported large models
 - [OpenAI](https://platform.openai.com/docs/api-reference/introduction)
@@ -18,10 +18,11 @@
 
 ## Installation
 
-#### Using npm:
 ```
 npm install pantheons
+bunx jsr add @greywen/pantheons
 ```
+
 ## Usages
 
 #### Nodejs
@@ -44,4 +45,26 @@ import { Deepseek } from 'pantheons';
 
     console.log(result);
 })()
+```
+
+#### Bun
+
+```typescript
+import { Deepseek } from "@greywen/pantheons";
+
+
+const client = new Deepseek('Your key');
+const stream = await client.stream({
+    model: 'deepseek-chat',
+    stream: true,
+    messages: [{ role: 'user', content: 'Hi!' }],
+});
+
+let result = '';
+for await (const chunk of stream) {
+    result += chunk.choices[0].delta?.content;
+}
+
+console.log(result);
+
 ```
