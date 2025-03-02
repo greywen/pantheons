@@ -3,6 +3,7 @@ import dts from 'rollup-plugin-dts'
 import del from 'rollup-plugin-delete'
 import resolve from '@rollup/plugin-node-resolve';
 import terser from '@rollup/plugin-terser'
+import copy from 'rollup-plugin-copy'
 
 import { defineConfig } from 'rollup'
 
@@ -45,9 +46,7 @@ const config = defineConfig([
             }
         ],
         plugins: [
-            typescript({
-                declaration: false
-            }),
+            typescript(),
             resolve()
         ]
     },
@@ -59,10 +58,13 @@ const config = defineConfig([
         },
         plugins: [
             dts(),
-            // del({
-            //     targets: 'dist/types',
-            //     hook: 'buildEnd'
-            // })
+            copy({
+                targets: [{ src: 'dist/index.d.ts', dest: 'src/' },]
+            }),
+            del({
+                targets: 'dist/types',
+                hook: 'buildEnd'
+            })
         ]
     }
 ])

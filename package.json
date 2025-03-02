@@ -40,6 +40,7 @@
     "@types/jest": "^29.5.14",
     "dotenv": "^16.4.7",
     "rollup": "^4.34.8",
+    "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-delete": "^3.0.0",
     "rollup-plugin-dts": "^6.1.1",
     "ts-jest": "^29.2.6",
