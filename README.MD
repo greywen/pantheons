@@ -3,7 +3,7 @@
 # Pantheons
 `Pantheons.js` is a unified conversational library built on top of the OpenAI Node.js SDK. It provides a seamless interface to interact with multiple large language models (LLMs) like OpenAI, Deepseek, DashScope, Gemini and more. Inspired by the mythological pantheon of gods—each representing unique powers and attributes—this library unifies various models under a single, intuitive interface.
 
-## 支持的大模型
+## Supported large models
 - [OpenAI](https://platform.openai.com/docs/api-reference/introduction)
 - [Aliyun Dashscope](https://help.aliyun.com/zh/model-studio/developer-reference)
 - [Tencent HunYuan](https://cloud.tencent.com/document/product/1729/101839)

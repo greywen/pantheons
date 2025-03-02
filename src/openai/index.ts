@@ -18,7 +18,7 @@ export class OpenAI extends ClientBase<
     super(apiKey, baseURL, options);
   }
 
-  public async create() {
+  public async create(): Promise<OpenAIClient> {
     return new OpenAIClient({
       apiKey: this.apiKey,
       baseURL: this.baseURL,

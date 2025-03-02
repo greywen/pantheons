@@ -27,6 +27,26 @@ npm install pantheons
 
 ### Nodejs
 
+```javascript
+const { Deepseek } = require('pantheons');
+
+(async () => {
+    const client = new Deepseek('Your key');
+    const stream = await client.stream({
+        model: 'deepseek-chat',
+        stream: true,
+        messages: [{ role: 'user', content: 'Hi!' }],
+    });
+
+    let result = '';
+    for await (const chunk of stream) {
+        result += chunk.choices[0].delta?.content;
+    }
+
+    console.log(result);
+})()
+```
+
 ### Deno
 
 ### Bun
