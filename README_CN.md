@@ -16,6 +16,7 @@
 - [Ollama](https://github.com/ollama/ollama/blob/main/docs/api.md)
 - [智谱清言(ZhiPu)](https://open.bigmodel.cn/dev/api/normal-model/glm-4)
 - [XAI](https://docs.x.ai/docs/overview)
+- [零一万物(LingYiWanWu)](https://platform.lingyiwanwu.com/docs/api-reference)
 
 ## 安装方法
 

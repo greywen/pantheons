@@ -9,6 +9,7 @@ import { Gemini } from './gemini';
 import { Ollama } from './ollama';
 import { ZhiPu } from './zhipu';
 import { XAI } from './xai';
+import { LingYiWanWu } from './lingyiwanwu';
 
 export {
     OpenAI,
@@ -21,5 +22,6 @@ export {
     Gemini,
     Ollama,
     ZhiPu,
-    XAI
+    XAI,
+    LingYiWanWu
 };

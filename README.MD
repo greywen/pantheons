@@ -15,6 +15,7 @@
 - [Ollama](https://github.com/ollama/ollama/blob/main/docs/api.md)
 - [ZhiPu](https://open.bigmodel.cn/dev/api/normal-model/glm-4)
 - [XAI](https://docs.x.ai/docs/overview)
+- [YiLarge](https://platform.lingyiwanwu.com/docs/api-reference)
 
 ## Installation
 
