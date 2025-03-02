@@ -15,3 +15,33 @@
 - [Ollama](https://github.com/ollama/ollama/blob/main/docs/api.md)
 - [ZhiPu](https://open.bigmodel.cn/dev/api/normal-model/glm-4)
 - [XAI](https://docs.x.ai/docs/overview)
+
+## Installation
+
+#### Using npm:
+```
+npm install pantheons
+```
+## Usages
+
+#### Nodejs
+
+```typescript
+import { Deepseek } from 'pantheons';
+
+(async () => {
+    const client = new Deepseek('Your key');
+    const stream = await client.stream({
+        model: 'deepseek-chat',
+        stream: true,
+        messages: [{ role: 'user', content: 'Hi!' }],
+    });
+
+    let result = '';
+    for await (const chunk of stream) {
+        result += chunk.choices[0].delta?.content;
+    }
+
+    console.log(result);
+})()
+```

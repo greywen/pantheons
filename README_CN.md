@@ -19,16 +19,17 @@
 
 ## 安装方法
 
+#### 使用 npm:
 ```
 npm install pantheons
 ```
 
 ## 使用方法
 
-### Nodejs
+#### Nodejs
 
-```javascript
-const { Deepseek } = require('pantheons');
+```typescript
+import { Deepseek } from 'pantheons';
 
 (async () => {
     const client = new Deepseek('Your key');
@@ -46,9 +47,3 @@ const { Deepseek } = require('pantheons');
     console.log(result);
 })()
 ```
-
-### Deno
-
-### Bun
-
-### Web
