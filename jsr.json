@@ -1,6 +1,6 @@
 {
     "name": "@greywen/pantheons",
-    "version": "0.0.2",
+    "version": "0.0.2-beta",
     "exports": {
         ".": "./src/index.ts"
     },
