@@ -22,6 +22,7 @@
 - [XAI](https://docs.x.ai/docs/overview)
 - [零一万物(LingYiWanWu)](https://platform.lingyiwanwu.com/docs/api-reference)
 - [MiniMax](https://platform.minimaxi.com/document/Fast%20access)
+- [讯飞星火(Spark)](https://console.xfyun.cn/services/sparkapiCenter)
 
 ## 安装方法
 

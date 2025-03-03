@@ -25,7 +25,8 @@
   "keywords": [
     "openai",
     "dashscope",
-    "llms"
+    "llms",
+    "multi-model"
   ],
   "repository": {
     "type": "git",

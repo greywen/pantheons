@@ -11,6 +11,7 @@ import { ZhiPu } from './zhipu';
 import { XAI } from './xai';
 import { LingYiWanWu } from './lingyiwanwu';
 import { MiniMax } from './minimax';
+import { Spark } from './spark';
 
 export {
   OpenAI,
@@ -26,4 +27,5 @@ export {
   XAI,
   LingYiWanWu,
   MiniMax,
+  Spark,
 };
