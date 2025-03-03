@@ -21,6 +21,7 @@
 - [ZhiPu](https://open.bigmodel.cn/dev/api/normal-model/glm-4)
 - [XAI](https://docs.x.ai/docs/overview)
 - [YiLarge](https://platform.lingyiwanwu.com/docs/api-reference)
+- [MiniMax](https://platform.minimaxi.com/document/Fast%20access)
 
 ## Installation
 
