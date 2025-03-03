@@ -2,17 +2,17 @@ import { ChatCompletionChunk } from 'openai/resources';
 import { OpenAI } from '../openai';
 import { RequestOptions, APIPromise } from 'openai/core';
 import { Stream } from 'openai/streaming';
-import { DeepseekChatCompletionCreateParamsStreaming } from './types';
+import { DeepSeekChatCompletionCreateParamsStreaming } from './types';
 import { ClientBaseOptions } from '../core/types';
 
-export class Deepseek extends OpenAI {
+export class DeepSeek extends OpenAI {
   constructor(apiKey: string, options?: ClientBaseOptions) {
     let baseURL = 'https://api.deepseek.com';
     super(apiKey, baseURL, options);
   }
 
   override async stream(
-    body: DeepseekChatCompletionCreateParamsStreaming,
+    body: DeepSeekChatCompletionCreateParamsStreaming,
     options?: RequestOptions
   ): Promise<APIPromise<Stream<ChatCompletionChunk>>> {
     const client = await this.create();

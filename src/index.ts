@@ -2,9 +2,9 @@ import { OpenAI } from './openai';
 import { DashScope } from './dashscope';
 import { HunYuan } from './hunyuan';
 import { Moonshot } from './moonshot';
-import { Siliconflow } from "./siliconflow"
-import { Deepseek } from './deepseek';
-import { QianFan } from './qianfan';
+import { SiliconFlow } from "./siliconflow"
+import { DeepSeek } from './deepseek';
+import { Qianfan } from './qianfan';
 import { Gemini } from './gemini';
 import { Ollama } from './ollama';
 import { ZhiPu } from './zhipu';
@@ -16,9 +16,9 @@ export {
     DashScope,
     HunYuan,
     Moonshot,
-    Siliconflow,
-    Deepseek,
-    QianFan,
+    SiliconFlow,
+    DeepSeek,
+    Qianfan,
     Gemini,
     Ollama,
     ZhiPu,

@@ -6,11 +6,11 @@
 
 ## 支持的大模型
 - [OpenAI](https://platform.openai.com/docs/api-reference/introduction)
-- [通义千问(Dashscope)](https://help.aliyun.com/zh/model-studio/developer-reference)
+- [通义千问(DashScope)](https://help.aliyun.com/zh/model-studio/developer-reference)
 - [腾讯混元(HunYuan)](https://cloud.tencent.com/document/product/1729/101839)
 - [月之暗面(Moonshot)](https://platform.moonshot.cn/docs/intro)
-- [硅基流动(Siliconflow)](https://docs.siliconflow.cn/cn/userguide/introduction)
-- [Deepseek](https://api-docs.deepseek.com/)
+- [硅基流动(SiliconFlow)](https://docs.siliconflow.cn/cn/userguide/introduction)
+- [DeepSeek](https://api-docs.deepseek.com/)
 - [文心一言(QianFan)](https://cloud.baidu.com/doc/WENXINWORKSHOP/s/7ltgucw50)
 - [Gemini](https://ai.google.dev/gemini-api/docs)
 - [Ollama](https://github.com/ollama/ollama/blob/main/docs/api.md)

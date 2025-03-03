@@ -1,12 +1,12 @@
-import { Siliconflow } from '../dist';
+import { SiliconFlow } from '../dist';
 
-let client: Siliconflow;
+let client: SiliconFlow;
 
 beforeAll(() => {
-    client = new Siliconflow(process.env.SILICONFLOW_API_KEY!);
+    client = new SiliconFlow(process.env.SILICONFLOW_API_KEY!);
 });
 
-test('Siliconflow text stream', async () => {
+test('SiliconFlow text stream', async () => {
     const stream = await client.stream({
         model: 'deepseek-ai/DeepSeek-V3',
         stream: true,
