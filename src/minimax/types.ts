@@ -1,8 +1,8 @@
 import { ChatCompletionCreateParamsStreaming } from 'openai/resources';
 
-type ChatModels = 'deepseek-chat' | 'deepseek-reasoner';
+export type ChatModels = 'minimax-text-01' | 'abab6.5s-chat' | 'deepseek-r1';
 
-export interface DeepSeekChatCompletionCreateParamsStreaming
+export interface MiniMaxChatCompletionCreateParamsStreaming
   extends ChatCompletionCreateParamsStreaming {
   model: ChatModels | (string & {});
 }

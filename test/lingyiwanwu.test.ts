@@ -8,7 +8,7 @@ beforeAll(() => {
 
 test('LingYiWanWu text stream', async () => {
     const stream = await client.stream({
-        model: 'yi-large',
+        model: 'yi-lightning',
         stream: true,
         messages: [{ role: 'user', content: 'Hi!' }],
     });

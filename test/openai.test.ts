@@ -1,14 +1,14 @@
-import { Qianfan } from '../dist';
+import { OpenAI } from '../dist';
 
-let client: Qianfan;
+let client: OpenAI;
 
 beforeAll(() => {
-  client = new Qianfan(process.env.QIANFAN_API_KEY!);
+  client = new OpenAI(process.env.OPENAI_API_KEY!);
 });
 
-test('Qianfan text stream', async () => {
+test('OpenAI text stream', async () => {
   const stream = await client.stream({
-    model: 'ernie-4.0-turbo-8k-latest',
+    model: 'gpt-4o-mini',
     stream: true,
     messages: [{ role: 'user', content: 'Hi!' }],
   });

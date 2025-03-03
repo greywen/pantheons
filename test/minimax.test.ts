@@ -1,14 +1,14 @@
-import { Qianfan } from '../dist';
+import { MiniMax } from '../dist';
 
-let client: Qianfan;
+let client: MiniMax;
 
 beforeAll(() => {
-  client = new Qianfan(process.env.QIANFAN_API_KEY!);
+  client = new MiniMax(process.env.MINIMAX_API_KEY!);
 });
 
-test('Qianfan text stream', async () => {
+test('MiniMax text stream', async () => {
   const stream = await client.stream({
-    model: 'ernie-4.0-turbo-8k-latest',
+    model: 'minimax-text-01',
     stream: true,
     messages: [{ role: 'user', content: 'Hi!' }],
   });

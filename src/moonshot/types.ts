@@ -1,7 +1,7 @@
 import { ChatCompletionCreateParamsStreaming } from 'openai/resources';
 
 export type ChatModels =
-  'kimi-latest'
+  | 'kimi-latest'
   | 'moonshot-v1-8k'
   | 'moonshot-v1-32k'
   | 'moonshot-v1-128k'

@@ -2,17 +2,17 @@ import { ChatCompletionChunk } from 'openai/resources';
 import { OpenAI } from '../openai';
 import { RequestOptions, APIPromise } from 'openai/core';
 import { Stream } from 'openai/streaming';
-import { SiliconFlowChatCompletionCreateParamsStreaming } from './types';
+import { MiniMaxChatCompletionCreateParamsStreaming } from './types';
 import { ClientBaseOptions } from '../core/types';
 
-export class SiliconFlow extends OpenAI {
+export class MiniMax extends OpenAI {
   constructor(apiKey: string, options?: ClientBaseOptions) {
-    let baseURL = 'https://api.siliconflow.cn/v1';
+    let baseURL = 'https://api.minimax.chat/v1';
     super(apiKey, baseURL, options);
   }
 
   override async stream(
-    body: SiliconFlowChatCompletionCreateParamsStreaming,
+    body: MiniMaxChatCompletionCreateParamsStreaming,
     options?: RequestOptions
   ): Promise<APIPromise<Stream<ChatCompletionChunk>>> {
     const client = await this.create();

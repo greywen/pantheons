@@ -1,7 +1,7 @@
 import { ChatCompletionCreateParamsStreaming } from 'openai/resources';
 
 
-type QianFanText =
+type QianfanText =
   'ernie-4.0-8k-latest'
   | 'ernie-4.0-8k-preview'
   | 'ernie-4.0-8k'
@@ -32,11 +32,11 @@ type QianFanText =
   | 'deepseek-r1-distill-qianfan-llama-70b'
   | 'deepseek-r1-distill-qianfan-llama-8b';
 
-type QianFanVL = 'deepseek-vl2' | 'deepseek-vl2-small'
+type QianfanVL = 'deepseek-vl2' | 'deepseek-vl2-small'
 
-type ChatModels = QianFanText | QianFanVL;
+type ChatModels = QianfanText | QianfanVL;
 
-export interface QianFanChatCompletionCreateParamsStreaming
+export interface QianfanChatCompletionCreateParamsStreaming
   extends ChatCompletionCreateParamsStreaming {
   model: ChatModels | (string & {});
   web_search?: {

@@ -1,6 +1,6 @@
 import { ChatCompletionCreateParamsStreaming } from 'openai/resources';
 
-export type SiliconflowText =
+export type SiliconFlowText =
   'deepseek-ai/DeepSeek-R1'
   | 'Pro/deepseek-ai/DeepSeek-R1'
   | 'deepseek-ai/DeepSeek-V3'
@@ -33,7 +33,7 @@ export type SiliconflowText =
   | 'Pro/THUDM/chatglm3-6b'
   | 'Pro/THUDM/glm-4-9b-chat';
 
-type SiliconflowVL =
+type SiliconFlowVL =
   | 'Qwen/QVQ-72B-Preview'
   | 'deepseek-ai/deepseek-vl2'
   | 'Qwen/Qwen2-VL-72B-Instruct'
@@ -42,9 +42,9 @@ type SiliconflowVL =
   | 'Pro/OpenGVLab/InternVL2-8B'
   | 'TeleAI/TeleMM';
 
-type ChatModels = SiliconflowText | SiliconflowVL;
+type ChatModels = SiliconFlowText | SiliconFlowVL;
 
-export interface SiliconflowChatCompletionCreateParamsStreaming
+export interface SiliconFlowChatCompletionCreateParamsStreaming
   extends ChatCompletionCreateParamsStreaming {
   model: ChatModels | (string & {});
 }

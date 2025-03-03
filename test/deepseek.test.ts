@@ -1,12 +1,12 @@
-import { Deepseek } from '../dist';
+import { DeepSeek } from '../dist';
 
-let client: Deepseek;
+let client: DeepSeek;
 
 beforeAll(() => {
-    client = new Deepseek(process.env.DEEPSEEK_API_KEY!);
+    client = new DeepSeek(process.env.DEEPSEEK_API_KEY!);
 });
 
-test('Deepseek text stream', async () => {
+test('DeepSeek text stream', async () => {
     const stream = await client.stream({
         model: 'deepseek-chat',
         stream: true,

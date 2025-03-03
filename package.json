@@ -1,6 +1,6 @@
 {
   "name": "pantheons",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "private": false,
   "description": "Pantheons.js is a unified conversational library built on top of the OpenAI Node.js SDK. It provides a seamless interface to interact with multiple large language models (LLMs) like OpenAI, Deepseek, DashScope, Gemini and more.",
   "main": "dist/index.js",
@@ -48,7 +48,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "openai": "^4.85.4"
+    "openai": "^4.86.1"
   },
   "volta": {
     "node": "22.14.0"
