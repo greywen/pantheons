@@ -86,10 +86,10 @@ declare class DeepSeek extends OpenAI {
     stream(body: DeepSeekChatCompletionCreateParamsStreaming, options?: RequestOptions): Promise<APIPromise<Stream<ChatCompletionChunk$1>>>;
 }
 
-type QianFanText = 'ernie-4.0-8k-latest' | 'ernie-4.0-8k-preview' | 'ernie-4.0-8k' | 'ernie-4.0-turbo-8k-latest' | 'ernie-4.0-turbo-8k-preview' | 'ernie-4.0-turbo-8k' | 'ernie-4.0-turbo-128k' | 'ernie-3.5-8k-preview' | 'ernie-3.5-8k' | 'ernie-3.5-128k' | 'ernie-speed-8k' | 'ernie-speed-128k' | 'ernie-speed-pro-128k' | 'ernie-lite-8k' | 'ernie-lite-pro-128k' | 'ernie-tiny-8k' | 'ernie-char-8k' | 'ernie-char-fiction-8k' | 'ernie-novel-8k' | 'deepseek-v3' | 'deepseek-r1' | 'deepseek-r1-distill-qwen-32b' | 'deepseek-r1-distill-qwen-14b' | 'deepseek-r1-distill-qwen-7b' | 'deepseek-r1-distill-qwen-1.5b' | 'deepseek-r1-distill-llama-70b' | 'deepseek-r1-distill-llama-8b' | 'deepseek-r1-distill-qianfan-llama-70b' | 'deepseek-r1-distill-qianfan-llama-8b';
-type QianFanVL = 'deepseek-vl2' | 'deepseek-vl2-small';
-type ChatModels$5 = QianFanText | QianFanVL;
-interface QianFanChatCompletionCreateParamsStreaming extends ChatCompletionCreateParamsStreaming {
+type QianfanText = 'ernie-4.0-8k-latest' | 'ernie-4.0-8k-preview' | 'ernie-4.0-8k' | 'ernie-4.0-turbo-8k-latest' | 'ernie-4.0-turbo-8k-preview' | 'ernie-4.0-turbo-8k' | 'ernie-4.0-turbo-128k' | 'ernie-3.5-8k-preview' | 'ernie-3.5-8k' | 'ernie-3.5-128k' | 'ernie-speed-8k' | 'ernie-speed-128k' | 'ernie-speed-pro-128k' | 'ernie-lite-8k' | 'ernie-lite-pro-128k' | 'ernie-tiny-8k' | 'ernie-char-8k' | 'ernie-char-fiction-8k' | 'ernie-novel-8k' | 'deepseek-v3' | 'deepseek-r1' | 'deepseek-r1-distill-qwen-32b' | 'deepseek-r1-distill-qwen-14b' | 'deepseek-r1-distill-qwen-7b' | 'deepseek-r1-distill-qwen-1.5b' | 'deepseek-r1-distill-llama-70b' | 'deepseek-r1-distill-llama-8b' | 'deepseek-r1-distill-qianfan-llama-70b' | 'deepseek-r1-distill-qianfan-llama-8b';
+type QianfanVL = 'deepseek-vl2' | 'deepseek-vl2-small';
+type ChatModels$5 = QianfanText | QianfanVL;
+interface QianfanChatCompletionCreateParamsStreaming extends ChatCompletionCreateParamsStreaming {
     model: ChatModels$5 | (string & {});
     web_search?: {
         enable: boolean;
@@ -98,9 +98,9 @@ interface QianFanChatCompletionCreateParamsStreaming extends ChatCompletionCreat
     };
 }
 
-declare class QianFan extends OpenAI {
+declare class Qianfan extends OpenAI {
     constructor(apiKey: string, options?: ClientBaseOptions);
-    stream(body: QianFanChatCompletionCreateParamsStreaming, options?: RequestOptions): Promise<APIPromise<Stream<ChatCompletionChunk$1>>>;
+    stream(body: QianfanChatCompletionCreateParamsStreaming, options?: RequestOptions): Promise<APIPromise<Stream<ChatCompletionChunk$1>>>;
 }
 
 type ChatModels$4 = 'gemini-2.0-flash-thinking-exp' | 'gemini-2.0-flash' | 'gemini-2.0-flash-lite' | 'imagen-3' | 'gemini-1.5-flash' | 'gemini-1.5-flash-8b' | 'gemini-1.5-pro';
@@ -157,4 +157,4 @@ declare class LingYiWanWu extends OpenAI {
     stream(body: LingYiWanWuChatCompletionCreateParamsStreaming, options?: RequestOptions): Promise<APIPromise<Stream<ChatCompletionChunk$1>>>;
 }
 
-export { DashScope, DeepSeek, Gemini, HunYuan, LingYiWanWu, Moonshot, Ollama, OpenAI, QianFan, SiliconFlow, XAI, ZhiPu };
+export { DashScope, DeepSeek, Gemini, HunYuan, LingYiWanWu, Moonshot, Ollama, OpenAI, Qianfan, SiliconFlow, XAI, ZhiPu };

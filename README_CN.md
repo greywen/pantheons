@@ -8,6 +8,7 @@
 
 ## 支持的大模型
 - [OpenAI](https://platform.openai.com/docs/api-reference/introduction)
+- [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai)
 - [通义千问(DashScope)](https://help.aliyun.com/zh/model-studio/developer-reference)
 - [腾讯混元(HunYuan)](https://cloud.tencent.com/document/product/1729/101839)
 - [月之暗面(Moonshot)](https://platform.moonshot.cn/docs/intro)
@@ -70,5 +71,11 @@ for await (const chunk of stream) {
 }
 
 console.log(result);
+
+```
+
+#### 多模型
+
+```typescript
 
 ```

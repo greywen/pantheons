@@ -8,6 +8,7 @@
 
 ## Supported large models
 - [OpenAI](https://platform.openai.com/docs/api-reference/introduction)
+- [Azure OpenAI](https://learn.microsoft.com/en-us/azure/ai-services/openai)
 - [Aliyun DashScope](https://help.aliyun.com/zh/model-studio/developer-reference)
 - [Tencent HunYuan](https://cloud.tencent.com/document/product/1729/101839)
 - [Moonshot](https://platform.moonshot.cn/docs/intro)
