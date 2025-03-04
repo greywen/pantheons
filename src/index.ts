@@ -12,6 +12,7 @@ import { XAI } from './xai';
 import { LingYiWanWu } from './lingyiwanwu';
 import { MiniMax } from './minimax';
 import { Spark } from './spark';
+import { Anthropic } from './anthropic';
 
 export {
   OpenAI,
@@ -28,4 +29,5 @@ export {
   LingYiWanWu,
   MiniMax,
   Spark,
+  Anthropic,
 };

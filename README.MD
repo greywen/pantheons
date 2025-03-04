@@ -23,6 +23,7 @@
 - [YiLarge](https://platform.lingyiwanwu.com/docs/api-reference)
 - [MiniMax](https://platform.minimaxi.com/document/Fast%20access)
 - [Spark](https://console.xfyun.cn/services/sparkapiCenter)
+- [Anthropic(Claude)](https://docs.anthropic.com/en/api/getting-started)
 
 ## Installation
 

@@ -2,17 +2,17 @@ import { ChatCompletionChunk } from 'openai/resources';
 import { OpenAI } from '../openai';
 import { RequestOptions, APIPromise } from 'openai/core';
 import { Stream } from 'openai/streaming';
-import { OllamaChatCompletionCreateParamsStreaming } from './types';
+import { AnthropicChatCompletionCreateParamsStreaming } from './types';
 import { ClientBaseOptions } from '../core/types';
 
-export class Ollama extends OpenAI {
+export class Anthropic extends OpenAI {
   constructor(apiKey: string, options?: ClientBaseOptions) {
-    let baseURL = 'http://localhost:11434/v1';
+    let baseURL = 'https://api.anthropic.com/v1';
     super(apiKey, baseURL, options);
   }
 
   override async stream(
-    body: OllamaChatCompletionCreateParamsStreaming,
+    body: AnthropicChatCompletionCreateParamsStreaming,
     options?: RequestOptions
   ): Promise<APIPromise<Stream<ChatCompletionChunk>>> {
     const client = await this.create();
