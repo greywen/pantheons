@@ -3,7 +3,7 @@ import { Ollama } from '../dist';
 let client: Ollama;
 
 beforeAll(() => {
-  client = new Ollama(process.env.OLLAMA_API_KEY!);
+  client = new Ollama(process.env.OLLAMA_API_KEY!, { baseURL: 'http://localhost:11434/v1' });
 });
 
 test('Ollama text stream', async () => {
